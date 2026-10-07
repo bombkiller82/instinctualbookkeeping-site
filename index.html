@@ -144,7 +144,10 @@
       <h2>Tell me what you need help with</h2>
       <p class="hint" style="margin-top:-6px;">I read every message myself and reply within one business day.</p>
 
-      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a5836679-94e4-4378-8fed-df47cb035f4a">
+        <input type="hidden" name="subject" value="New DMM website inquiry">
+        <input type="hidden" name="from_name" value="Instinctual Bookkeeping website">
         <div class="row">
           <label>Name
             <input type="text" name="name" autocomplete="name" required>
@@ -202,7 +205,7 @@
           </label>
         </div>
 
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div>
           <button class="btn" type="submit" id="send">Send message</button>
@@ -236,7 +239,7 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (form.action.indexOf("YOUR_FORM_ID") !== -1) {
+    if (form.access_key.value === "a5836679-94e4-4378-8fed-df47cb035f4a") {
       statusEl.textContent = "The form is not connected yet. Please email jon@instinctualbookkeeping.com instead.";
       return;
     }
@@ -247,12 +250,11 @@
       body: new FormData(form),
       headers: { "Accept": "application/json" }
     }).then(function (r) {
-      if (r.ok) {
+      return r.json().then(function (d) {
+        if (!r.ok || d.success === false) throw new Error("bad response");
         form.reset();
         statusEl.textContent = "Thank you. I received your message and will reply within one business day.";
-      } else {
-        throw new Error("bad response");
-      }
+      });
     }).catch(function () {
       statusEl.textContent = "Something went wrong sending that. Please email jon@instinctualbookkeeping.com directly.";
     }).finally(function () { sendBtn.disabled = false; });
