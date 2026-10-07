@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Money Management | Instinctual Bookkeeping</title>
+<meta name="description" content="Daily money management for busy households: bill paying, mail and paperwork, budgets, and medical bills, handled steadily so nothing slips. Based in Puyallup, WA. Serving clients in person locally and remotely nationwide.">
+<link rel="canonical" href="https://instinctualbookkeeping.com/">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1c2432;
+    --ink-soft: #4a5262;
+    --rule: #ded8ca;
+    --accent: #1f6f5c;
+    --accent-ink: #ffffff;
+    --accent-soft: #e3eee9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171d;
+      --surface: #1b1f27;
+      --ink: #e9e6df;
+      --ink-soft: #b1b5be;
+      --rule: #2f343e;
+      --accent: #55bda1;
+      --accent-ink: #0f1a16;
+      --accent-soft: #17322b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.65 -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header.site { border-bottom: 1px solid var(--rule); padding: 18px 0; }
+  header.site .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-weight: 600; letter-spacing: .01em; }
+  .brand small { display: block; font-weight: 400; color: var(--ink-soft); font-size: .8rem; }
+  a { color: var(--accent); }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--accent-ink);
+    padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;
+    border: 0; font-size: 1rem; cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .hero { padding: 56px 0 40px; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 16px; font-weight: 600; }
+  h2 { font-size: 1.4rem; margin: 0 0 14px; font-weight: 600; }
+  .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 36em; }
+  .hero .actions { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+  section { padding: 36px 0; border-top: 1px solid var(--rule); }
+  ul.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  ul.plain li { padding-left: 22px; position: relative; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  ol.steps { padding-left: 1.2em; margin: 0; display: grid; gap: 10px; }
+  .note { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 16px; border-radius: 0 6px 6px 0; font-size: .95rem; }
+  form { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 22px; display: grid; gap: 16px; }
+  label, legend { font-weight: 600; font-size: .95rem; }
+  .hint { font-weight: 400; color: var(--ink-soft); font-size: .88rem; }
+  input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%; padding: 11px 12px; font: inherit; color: var(--ink); background: var(--bg);
+    border: 1px solid var(--rule); border-radius: 6px; margin-top: 6px;
+  }
+  textarea { min-height: 120px; resize: vertical; }
+  fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .check { display: flex; gap: 8px; align-items: center; font-weight: 400; }
+  .row { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+  .hp { position: absolute; left: -9999px; }
+  #status { min-height: 1.4em; font-weight: 600; }
+  footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">Instinctual Bookkeeping<small>Daily money management &middot; Puyallup, WA</small></div>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Someone steady to keep your day-to-day money on track.</h1>
+      <p class="lede">I take care of the everyday side of your finances: bills, mail, paperwork, account upkeep, and medical bills. You stay in control, and nothing slips through the cracks.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Tell me what you need</a>
+        <a class="btn ghost" href="mailto:jon@instinctualbookkeeping.com?subject=Daily%20money%20management%20inquiry">Or email me directly</a>
+      </div>
+    </div>
+
+    <section id="help">
+      <h2>What I help with</h2>
+      <ul class="plain">
+        <li><strong>Bill paying.</strong> On time, every time, from a dedicated account you control, with a written record of what was paid.</li>
+        <li><strong>Mail and paperwork.</strong> Sorting, tracking, and following up so important items do not get buried.</li>
+        <li><strong>Budgets and cash flow.</strong> A realistic plan built around how you actually live, and a monthly summary so you always know where you stand.</li>
+        <li><strong>Medical bills and insurance claims.</strong> Reviewing statements, tracking claims, and following up on what is unpaid or denied.</li>
+        <li><strong>Debt and autopay.</strong> Setting up autopay, keeping an eye on what actually processes, and building a payoff plan you can follow.</li>
+        <li><strong>Helping a family member.</strong> Support for a parent or loved one whose finances have become too much to manage alone.</li>
+      </ul>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>You tell me what is going on.</strong> Use the form below or send an email. A few sentences is plenty.</li>
+        <li><strong>We talk it through.</strong> A short, no-pressure call so I can understand your situation and tell you honestly whether I can help.</li>
+        <li><strong>We put it in writing.</strong> A clear agreement and a confidentiality agreement before I see anything sensitive. Then we start.</li>
+      </ol>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>I am Jon Cherwa. I retired from the U.S. Army after 20 years as an explosive ordnance disposal technician, which is where I learned to stay calm, pay attention to details, and do what I say I will do. I started Instinctual Bookkeeping to bring that same steadiness to people's finances.</p>
+      <ul class="plain">
+        <li>Member, American Association of Daily Money Managers (AADMM)</li>
+        <li>QuickBooks Online ProAdvisor, Advanced</li>
+        <li>Carry professional liability insurance</li>
+        <li>Veteran-owned. Based in Puyallup, WA. I work in person around Puyallup and Tacoma, and remotely with clients anywhere.</li>
+      </ul>
+    </section>
+
+    <section id="privacy">
+      <h2>Your information stays protected</h2>
+      <p>I do not hold or move your money. I work as an authorized user on an account you own, with limited access. Passwords are kept in an encrypted password manager and are never sent by email or text.</p>
+      <div class="note">Please do not put account numbers, Social Security numbers, or passwords in the form or in an email. You will not need to share any of that to get started.</div>
+    </section>
+
+    <section id="scope">
+      <h2>What I do not do</h2>
+      <p>I am a daily money manager, not a CPA, investment advisor, financial planner, or attorney. I do not prepare tax returns, manage investments, or give legal advice. If you need one of those, I am glad to work alongside the professional you choose.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Tell me what you need help with</h2>
+      <p class="hint" style="margin-top:-6px;">I read every message myself and reply within one business day.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="row">
+          <label>Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Phone <span class="hint">(optional)</span>
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <label>Best way to reach you
+            <select name="preferred_contact">
+              <option>Email</option>
+              <option>Phone call</option>
+              <option>Text message</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>What do you need help with? <span class="hint">(check any that fit)</span></legend>
+          <label class="check"><input type="checkbox" name="help_with" value="Bill paying"> Bill paying</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Mail and paperwork"> Mail and paperwork</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Budgeting"> Budgeting and cash flow</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Medical bills and claims"> Medical bills and insurance claims</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Debt"> Debt and payoff planning</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Family member"> Helping a family member</label>
+          <label class="check"><input type="checkbox" name="help_with" value="Not sure"> Not sure yet</label>
+        </fieldset>
+
+        <label>A few sentences about your situation
+          <textarea name="message" required></textarea>
+        </label>
+
+        <div class="row">
+          <label>How soon do you need help?
+            <select name="timeline">
+              <option>No rush, just exploring</option>
+              <option>Within the next month</option>
+              <option>As soon as possible</option>
+            </select>
+          </label>
+          <label>How did you find me?
+            <select name="source" id="source">
+              <option>Thumbtack</option>
+              <option>Referral from a professional</option>
+              <option>Friend or family</option>
+              <option>Online search</option>
+              <option>AADMM directory</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div>
+          <button class="btn" type="submit" id="send">Send message</button>
+          <p id="status" role="status" aria-live="polite"></p>
+        </div>
+        <p class="hint" style="margin:0;">Prefer email? Write to <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a>. Please leave out account numbers and passwords.</p>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Instinctual Bookkeeping, LLC &middot; Puyallup, Washington &middot; <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a></p>
+    <p>Daily money management is not tax, investment, or legal advice, and I am not a licensed CPA, financial planner, or attorney.</p>
+  </div>
+</footer>
+
+<script>
+  // Pre-select "how did you find me" from ?ref= in the link (for example ?ref=thumbtack)
+  (function () {
+    var ref = new URLSearchParams(location.search).get("ref");
+    var map = { thumbtack: "Thumbtack", aadmm: "AADMM directory", referral: "Referral from a professional" };
+    if (ref && map[ref.toLowerCase()]) document.getElementById("source").value = map[ref.toLowerCase()];
+  })();
+
+  var form = document.getElementById("contact-form");
+  var statusEl = document.getElementById("status");
+  var sendBtn = document.getElementById("send");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.action.indexOf("YOUR_FORM_ID") !== -1) {
+      statusEl.textContent = "The form is not connected yet. Please email jon@instinctualbookkeeping.com instead.";
+      return;
+    }
+    sendBtn.disabled = true;
+    statusEl.textContent = "Sending...";
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (r) {
+      if (r.ok) {
+        form.reset();
+        statusEl.textContent = "Thank you. I received your message and will reply within one business day.";
+      } else {
+        throw new Error("bad response");
+      }
+    }).catch(function () {
+      statusEl.textContent = "Something went wrong sending that. Please email jon@instinctualbookkeeping.com directly.";
+    }).finally(function () { sendBtn.disabled = false; });
+  });
+</script>
+</body>
+</html>
