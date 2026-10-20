@@ -147,75 +147,8 @@
       <h2>Tell me what you need help with</h2>
       <p class="hint" style="margin-top:-6px;">I read every message myself and reply within one business day.</p>
 
-      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="a5836679-94e4-4378-8fed-df47cb035f4a">
-        <input type="hidden" name="subject" value="New DMM website inquiry">
-        <input type="hidden" name="from_name" value="Instinctual Bookkeeping website">
-        <div class="row">
-          <label>Name
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label>Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-        </div>
-
-        <div class="row">
-          <label>Phone <span class="hint">(optional)</span>
-            <input type="tel" name="phone" autocomplete="tel">
-          </label>
-          <label>Best way to reach you
-            <select name="preferred_contact">
-              <option>Email</option>
-              <option>Phone call</option>
-              <option>Text message</option>
-            </select>
-          </label>
-        </div>
-
-        <fieldset>
-          <legend>What do you need help with? <span class="hint">(check any that fit)</span></legend>
-          <label class="check"><input type="checkbox" name="help_with" value="Bill paying"> Bill paying</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Mail and paperwork"> Mail and paperwork</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Budgeting"> Budgeting and cash flow</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Medical bills and claims"> Medical bills and insurance claims</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Debt"> Debt and payoff planning</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Family member"> Helping a family member</label>
-          <label class="check"><input type="checkbox" name="help_with" value="Not sure"> Not sure yet</label>
-        </fieldset>
-
-        <label>A few sentences about your situation
-          <textarea name="message" required></textarea>
-        </label>
-
-        <div class="row">
-          <label>How soon do you need help?
-            <select name="timeline">
-              <option>No rush, just exploring</option>
-              <option>Within the next month</option>
-              <option>As soon as possible</option>
-            </select>
-          </label>
-          <label>How did you find me?
-            <select name="source" id="source">
-              <option value="" selected disabled>Select one</option>
-              <option>Referral from a professional</option>
-              <option>Friend or family</option>
-              <option>Online search</option>
-              <option>AADMM directory</option>
-              <option>Other</option>
-            </select>
-          </label>
-        </div>
-
-        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <div>
-          <button class="btn" type="submit" id="send">Send message</button>
-          <p id="status" role="status" aria-live="polite"></p>
-        </div>
-        <p class="hint" style="margin:0;">Prefer email? Write to <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a>. Please leave out account numbers and passwords.</p>
-      </form>
+      <iframe src="https://app.suitedash.com/frm/24WvGf7z2abwAVLDb" title="Contact form" loading="lazy" style="width:100%;height:820px;border:1px solid #d9d9d9;border-radius:8px;background:#fff;"></iframe>
+      <p class="hint" style="margin-top:10px;">The form not showing? <a href="https://app.suitedash.com/frm/24WvGf7z2abwAVLDb" target="_blank" rel="noopener">Open it in a new tab</a>, or write to <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a>. Please leave out account numbers and passwords.</p>
     </section>
 
   </div>
@@ -228,40 +161,5 @@
   </div>
 </footer>
 
-<script>
-  // Pre-select "how did you find me" from ?ref= in the link (for example ?ref=referral)
-  (function () {
-    var ref = new URLSearchParams(location.search).get("ref");
-    var map = { aadmm: "AADMM directory", referral: "Referral from a professional" };
-    if (ref && map[ref.toLowerCase()]) document.getElementById("source").value = map[ref.toLowerCase()];
-  })();
-
-  var form = document.getElementById("contact-form");
-  var statusEl = document.getElementById("status");
-  var sendBtn = document.getElementById("send");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (form.access_key.value === "YOUR_ACCESS_KEY") {
-      statusEl.textContent = "The form is not connected yet. Please email jon@instinctualbookkeeping.com instead.";
-      return;
-    }
-    sendBtn.disabled = true;
-    statusEl.textContent = "Sending...";
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
-    }).then(function (r) {
-      return r.json().then(function (d) {
-        if (!r.ok || d.success === false) throw new Error("bad response");
-        form.reset();
-        statusEl.textContent = "Thank you. I received your message and will reply within one business day.";
-      });
-    }).catch(function () {
-      statusEl.textContent = "Something went wrong sending that. Please email jon@instinctualbookkeeping.com directly.";
-    }).finally(function () { sendBtn.disabled = false; });
-  });
-</script>
 </body>
 </html>
