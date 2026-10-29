@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Money Rules | Instinctual Bookkeeping</title>
+<meta name="description" content="Thirteen plain money rules, in order, adapted from an old Babylonian parable collection: pay yourself first, track what you spend, make savings earn, and keep life in balance.">
+<link rel="canonical" href="https://instinctualbookkeeping.com/money-rules.html">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1c2432;
+    --ink-soft: #4a5262;
+    --rule: #ded8ca;
+    --accent: #1f6f5c;
+    --accent-ink: #ffffff;
+    --accent-soft: #e3eee9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171d;
+      --surface: #1b1f27;
+      --ink: #e9e6df;
+      --ink-soft: #b1b5be;
+      --rule: #2f343e;
+      --accent: #55bda1;
+      --accent-ink: #0f1a16;
+      --accent-soft: #17322b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.65 -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header.site { border-bottom: 1px solid var(--rule); padding: 18px 0; }
+  header.site .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-weight: 600; letter-spacing: .01em; }
+  .brand small { display: block; font-weight: 400; color: var(--ink-soft); font-size: .8rem; }
+  a { color: var(--accent); }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--accent-ink);
+    padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;
+    border: 0; font-size: 1rem; cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .hero { padding: 48px 0 28px; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); line-height: 1.15; margin: 0 0 16px; font-weight: 600; }
+  h2 { font-size: 1.3rem; margin: 0 0 8px; font-weight: 600; }
+  .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 38em; }
+  section { padding: 28px 0; border-top: 1px solid var(--rule); }
+  .rule .num { display: inline-block; min-width: 1.9em; height: 1.9em; line-height: 1.9em; text-align: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: .9rem; font-weight: 600; margin-right: 8px; }
+  .rule p { margin: 0 0 10px; }
+  .note { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 16px; border-radius: 0 6px 6px 0; font-size: .95rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; margin: 12px 0; background: var(--surface); }
+  th, td { border: 1px solid var(--rule); padding: 8px 10px; text-align: left; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.total td { font-weight: 600; background: var(--accent-soft); }
+  .small { font-size: .88rem; color: var(--ink-soft); }
+  footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="/" style="color:inherit;text-decoration:none;">Instinctual Bookkeeping</a><small>Daily money management &middot; Puyallup, WA</small></div>
+    <a class="btn ghost" href="/#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>The money rules I follow, and the ones I work through with clients.</h1>
+      <p class="lede">These are adapted from a small book of parables from the 1920s, <em>The Richest Man in Babylon</em> by George S. Clason. The stories are old, but the habits hold up. They are written in order on purpose. Each rule makes the next one easier, so start at the top and do not skip ahead.</p>
+    </div>
+
+    <section class="rule" id="r1">
+      <h2><span class="num">1</span>Pay yourself first</h2>
+      <p>Before the bills and before the fun, move 10% of every paycheck into savings that you do not touch. Treat it like a bill you owe to yourself. If 10% feels like too much today, start with what you can and raise it each time your income goes up.</p>
+    </section>
+
+    <section class="rule" id="r2">
+      <h2><span class="num">2</span>Track what you spend, and spend less than you make</h2>
+      <p>Spending quietly grows to match income. A budget fixes that, but only if you check it against what really happened. My wife and I keep one simple spreadsheet. Each month we write down what we spent in a handful of categories, what went into savings, and what came in. The last column is the one that matters: did income cover everything? If not, we look at the notes column and find out why.</p>
+      <p>A month in the sheet looks like this. The numbers below are made up.</p>
+      <table>
+        <tr><th>Example month</th><th class="n">Amount</th></tr>
+        <tr><td>Housing, property tax and insurance</td><td class="n">$1,700</td></tr>
+        <tr><td>Utilities and phone</td><td class="n">$350</td></tr>
+        <tr><td>Groceries</td><td class="n">$800</td></tr>
+        <tr><td>Eating out</td><td class="n">$250</td></tr>
+        <tr><td>Car insurance and gas</td><td class="n">$450</td></tr>
+        <tr><td>Health</td><td class="n">$300</td></tr>
+        <tr><td>Kids and pets</td><td class="n">$450</td></tr>
+        <tr><td>Travel and fun</td><td class="n">$300</td></tr>
+        <tr><td>Everything else</td><td class="n">$400</td></tr>
+        <tr class="total"><td>Total spent</td><td class="n">$5,000</td></tr>
+        <tr><td>Saved and invested (10% of income)</td><td class="n">$600</td></tr>
+        <tr><td>Income</td><td class="n">$6,000</td></tr>
+        <tr class="total"><td>Left over (income minus spent minus saved)</td><td class="n">$400</td></tr>
+      </table>
+      <p class="small">Add a notes column for one-time costs such as a car repair, a trip, or a medical bill. Over a few months those notes explain most of the surprises.</p>
+      <p><a class="btn ghost" href="Money_Rules_Tracker.xlsx" download>Download the tracking sheet (Excel)</a></p>
+    </section>
+
+    <section class="rule" id="r3">
+      <h2><span class="num">3</span>Make your savings earn</h2>
+      <p>Savings that sit still earn very little. A simple way to split your 10% is 5% into a high-yield savings account and 5% into a diversified, low-cost investing account. The savings account is for safety and quick access. The investing account is for the long run, and its value will go up and down.</p>
+      <p>Compare a few providers before you decide, and look at the fees and how easy it is to move your money out.</p>
+      <div class="note">This is general education, not advice for your situation. Investing involves risk, including the loss of money.</div>
+    </section>
+
+    <section class="rule" id="r4">
+      <h2><span class="num">4</span>Guard what you build</h2>
+      <p>Build a cushion equal to about six months of your regular expenses, so that a job loss, a medical bill, or a car repair does not push you back into debt. It takes time, and that is fine. Many people send the whole 10% to the cushion until it is built, then switch to the split in rule 3. Keep the cushion in an account you can reach quickly, and do not count it as money to spend.</p>
+    </section>
+
+    <section class="rule" id="r5">
+      <h2><span class="num">5</span>Take advice from people who do this for a living</h2>
+      <p>Be careful where your money advice comes from. A coworker's hot tip, a video, or a social media post is not a plan. Ask a tax question of a CPA. Ask about investments from a fee-only fiduciary, meaning someone legally required to put your interests first and paid by you, not by the product. Ask a plumber about plumbing. Free advice costs the most when you follow it with your savings.</p>
+    </section>
+
+    <section class="rule" id="r6">
+      <h2><span class="num">6</span>Own your home when you are ready</h2>
+      <p>The goal behind this rule is to reach the point where you do not owe anyone for the roof over your head. Owning is not cheap. There is property tax, insurance, repairs, and a down payment, and a mortgage is still a debt. Buy when the first five rules are in place, not before.</p>
+    </section>
+
+    <section class="rule" id="r7">
+      <h2><span class="num">7</span>Plan for later and for the people who depend on you</h2>
+      <p>This is estate planning: a will, named beneficiaries on your accounts, and powers of attorney so someone you trust can act if you cannot. Life insurance is one tool, and many families with dependents look at term life insurance, which is simple and affordable. An estate planning attorney in your state is the right person to set this up.</p>
+    </section>
+
+    <section class="rule" id="r8">
+      <h2><span class="num">8</span>Set clear goals and keep learning</h2>
+      <p>"I want more money" is a wish. "I will have $2,000 saved by June 1" is a goal. Write it down with a number and a date, start with a small one, and finish it before you pick the next. Then keep getting better at what you do and what you know. The more skilled you become, the more you can earn.</p>
+    </section>
+
+    <section class="rule" id="r9">
+      <h2><span class="num">9</span>Take measured risks</h2>
+      <p>I tell my kids that no risk means no reward. A measured risk is one where you understand the downside, and you only put in what you can afford to lose. If losing it would change your life, it is not a measured risk.</p>
+    </section>
+
+    <section class="rule" id="r10">
+      <h2><span class="num">10</span>If you have debt, use a 10 / 70 / 20 plan</h2>
+      <p>Out of every dollar you earn, 10% is yours to keep, 70% covers your living costs, and 20% goes to your debts, split fairly among the people you owe. For every $1,000 you earn, that is $100 saved, $700 for living, and $200 toward debt. Tell your creditors what you are doing and ask for patience. Most will work with someone who is paying a little every month. The plan only works if you really live on the 70%.</p>
+    </section>
+
+    <section class="rule" id="r11">
+      <h2><span class="num">11</span>Be careful lending to friends and family</h2>
+      <p>I have learned this one the hard way. Lending to people you care about can cost you the money and the relationship. Only lend what you could afford to give away, and expect to be repaid slowly or not at all. If you want to help, consider a smaller gift instead of a loan.</p>
+    </section>
+
+    <section class="rule" id="r12">
+      <h2><span class="num">12</span>Work hard and take pride in it</h2>
+      <p>Nobody is going to hand you a good life, and you do not need to wait for one to be handed over. Do your work well, show up, and be proud of what you build. Skill and effort open doors that luck does not.</p>
+    </section>
+
+    <section class="rule" id="r13">
+      <h2><span class="num">13</span>Enjoy it</h2>
+      <p>We earn money so we can live well, not so we can hoard it. Spend some of it on the things and people that matter to you, on purpose and within your plan. The goal is balance.</p>
+    </section>
+
+    <section id="work-with-me">
+      <h2>How I use these rules with clients</h2>
+      <p>When I work with someone through coaching or daily money management, we start from these rules. In the first few weeks we look at where you are on each one, pick the next one to work on, and build it into the monthly routine: the tracking sheet, the savings transfers, the debt plan, and the bills. You do not have to do all thirteen at once.</p>
+      <p><a class="btn" href="/#contact">Tell me what you need</a></p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Instinctual Bookkeeping, LLC &middot; Puyallup, Washington &middot; <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a></p>
+    <p>This page is general education. It is not tax, investment, or legal advice, and I am not a licensed CPA, financial planner, investment advisor, or attorney. The rules are adapted from ideas in <em>The Richest Man in Babylon</em> by George S. Clason and are written in my own words.</p>
+  </div>
+</footer>
+
+</body>
+</html>
