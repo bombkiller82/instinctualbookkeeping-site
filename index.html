@@ -8,25 +8,25 @@
 <link rel="canonical" href="https://instinctualbookkeeping.com/">
 <style>
   :root {
-    --bg: #f7f5f0;
+    --bg: #f4f6fa;
     --surface: #ffffff;
-    --ink: #1c2432;
-    --ink-soft: #4a5262;
-    --rule: #ded8ca;
-    --accent: #1f6f5c;
+    --ink: #14213d;
+    --ink-soft: #4b5668;
+    --rule: #d7dee9;
+    --accent: #1f3a5f;
     --accent-ink: #ffffff;
-    --accent-soft: #e3eee9;
+    --accent-soft: #e6edf6;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14171d;
-      --surface: #1b1f27;
-      --ink: #e9e6df;
-      --ink-soft: #b1b5be;
-      --rule: #2f343e;
-      --accent: #55bda1;
-      --accent-ink: #0f1a16;
-      --accent-soft: #17322b;
+      --bg: #0e1623;
+      --surface: #16212f;
+      --ink: #e7ecf3;
+      --ink-soft: #a9b4c4;
+      --rule: #27364a;
+      --accent: #8fb4e8;
+      --accent-ink: #0b1424;
+      --accent-soft: #16263c;
     }
   }
   * { box-sizing: border-box; }
@@ -74,6 +74,33 @@
   #status { min-height: 1.4em; font-weight: 600; }
   footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  :root { --header-bg: #14284b; --brass: #a8803f; --head: #14284b; }
+  @media (prefers-color-scheme: dark) { :root { --header-bg: #0a111d; --brass: #c9a35f; --head: #e7ecf3; } }
+  h1, h2 { font-family: Georgia, "Times New Roman", serif; color: var(--head); }
+  header.site { background: var(--header-bg); border-bottom: 3px solid var(--brass); }
+  header.site .brand, header.site .brand a { color: #ffffff; }
+  header.site .brand small { color: #c5d0e0; }
+  header.site .btn.ghost { color: #ffffff; border-color: #ffffff; }
+  header.site .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  ul.plain li::before { background: var(--brass); }
+  .btn.ghost:hover { background: var(--accent-soft); }
+  .cols { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--brass); border-radius: 6px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; font-family: Georgia, "Times New Roman", serif; color: var(--head); }
+  .card p { margin: 0; font-size: .97rem; }
+  header.site .brand { display: flex; align-items: center; gap: 12px; }
+  header.site .brand .logo { border-radius: 50%; flex: none; }
+  .portrait { float: right; width: 150px; height: auto; margin: 4px 0 12px 20px; border-radius: 8px; border: 3px solid var(--brass); }
+  #about ul.plain { clear: both; }
+  @media (max-width: 560px) { .portrait { float: none; display: block; margin: 0 0 16px; } }
+  ul.plain.icons li { padding-left: 42px; min-height: 28px; }
+  ul.plain.icons li::before { display: none; }
+  ul.plain.icons li svg { position: absolute; left: 0; top: 1px; width: 28px; height: 28px; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .badge { display: block; margin-top: 18px; max-width: 100%; height: auto; }
+  .banner { display: block; width: 100%; height: auto; border-radius: 8px; margin: 8px 0 8px; }
+  .creds { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+  .creds img { width: 110px; height: 110px; object-fit: contain; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Instinctual Bookkeeping, LLC","url":"https://instinctualbookkeeping.com/","email":"jon@instinctualbookkeeping.com","description":"Daily money management: bill paying, mail and paperwork, budgets, and medical bills.","areaServed":"US","address":{"@type":"PostalAddress","addressLocality":"Puyallup","addressRegion":"WA","addressCountry":"US"}}
@@ -83,7 +110,7 @@
 
 <header class="site">
   <div class="wrap">
-    <div class="brand">Instinctual Bookkeeping<small>Daily money management &middot; Puyallup, WA</small></div>
+    <div class="brand"><img class="logo" src="/img/logo-mark.png" alt="" width="44" height="44"><span>Instinctual Bookkeeping<small>Daily money management &middot; Puyallup, WA</small></span></div>
     <a class="btn ghost" href="#contact">Get in touch</a>
   </div>
 </header>
@@ -100,16 +127,28 @@
       </div>
     </div>
 
+    <img class="banner" src="/img/puget-sound-mountains-banner.jpg" alt="Mountains and evergreen forest in Mount Rainier National Park, Washington" width="1400" height="513">
+
     <section id="help">
       <h2>What I help with</h2>
-      <ul class="plain">
-        <li><strong>Bill paying.</strong> On time, every time, from a dedicated account you control, with a written record of what was paid.</li>
-        <li><strong>Mail and paperwork.</strong> Sorting, tracking, and following up so important items do not get buried.</li>
-        <li><strong>Budgets and cash flow.</strong> A realistic plan built around how you actually live, and a monthly summary so you always know where you stand.</li>
-        <li><strong>Medical bills and insurance claims.</strong> Reviewing statements, tracking claims, and following up on what is unpaid or denied.</li>
-        <li><strong>Debt and autopay.</strong> Setting up autopay, keeping an eye on what actually processes, and building a payoff plan you can follow.</li>
-        <li><strong>Helping a family member.</strong> Support for a parent or loved one whose finances have become too much to manage alone.</li>
+      <ul class="plain icons">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><strong>Bill paying.</strong> On time, every time, from a dedicated account you control, with a written record of what was paid.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 7 8.5-7"/></svg><strong>Mail and paperwork.</strong> Sorting, tracking, and following up so important items do not get buried.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><strong>Budgets and cash flow.</strong> A realistic plan built around how you actually live, and a monthly summary so you always know where you stand.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 7.5v9M7.5 12h9"/></svg><strong>Medical bills and insurance claims.</strong> Reviewing statements, tracking claims, and following up on what is unpaid or denied.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14-4M4 5v3h3M4 13a8 8 0 0 0 14 4M20 19v-3h-3"/></svg><strong>Debt and autopay.</strong> Setting up autopay, keeping an eye on what actually processes, and building a payoff plan you can follow.</li>
       </ul>
+    </section>
+
+    <section id="who">
+      <h2>Who I help</h2>
+      <p>I work with people whose day-to-day money needs steady, reliable attention.</p>
+      <ul class="plain icons">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></svg><strong>Busy professionals.</strong> Your day-to-day money has gotten complicated, with multiple accounts, properties, or a trust, and you want it handled reliably and privately.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg><strong>High-net-worth individuals and families.</strong> Your money is spread across several accounts, properties, trusts, or advisors, and you want one steady person to handle the day-to-day details privately.</li>
+      </ul>
+      <p>I work alongside the professionals you already have, such as your CPA, estate attorney, or trust officer. I do not replace them.</p>
+      <div class="note"><strong>For estate attorneys, CPAs, and trust officers.</strong> If you have a client who needs day-to-day money help, I take care of bill paying, mail and paperwork, and medical bills, and I coordinate with you so your advice gets carried out. I do not give tax, legal, or investment advice. To refer a client or ask a question, write to <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a>.</div>
     </section>
 
     <section id="how">
@@ -124,18 +163,27 @@
     <section id="money-rules">
       <h2>The money rules I work from</h2>
       <p>Thirteen plain habits, in order, adapted from an old collection of parables: pay yourself first, track what you spend, make your savings earn, and keep life in balance. I use them as the starting point with every client, and you are welcome to use them on your own.</p>
-      <p><a class="btn ghost" href="money-rules.html">Read the money rules</a></p>
+      <p>If you would rather learn the rules and run your own money with my guidance, there is a coaching option too.</p>
+      <p><a class="btn ghost" href="money-rules.html">Read the money rules</a> <a class="btn ghost" href="coaching.html">About coaching</a></p>
     </section>
 
     <section id="about">
       <h2>About me</h2>
+      <img class="portrait" src="/img/jon-cherwa.jpg" alt="Jon Cherwa, owner of Instinctual Bookkeeping" width="150" height="183">
       <p>I am Jon Cherwa. I retired from the U.S. Army after 20 years as an explosive ordnance disposal technician, which is where I learned to stay calm, pay attention to details, and do what I say I will do. I started Instinctual Bookkeeping to bring that same steadiness to people's finances.</p>
       <ul class="plain">
-        <li>Member, American Association of Daily Money Managers (AADMM)</li>
-        <li>QuickBooks Online ProAdvisor, Advanced</li>
-        <li>Carry professional liability insurance</li>
+        <li>Member, <a href="https://www.aadmm.com/">American Association of Daily Money Managers (AADMM)</a>. AADMM requires its members to have a clear background check.</li>
+        <li>QuickBooks Online ProAdvisor, Level 2</li>
+        <li>I have passed a background check, and I carry professional liability insurance</li>
+        <li>Small business bookkeeping is limited now and by referral. Daily money management is my main focus.</li>
         <li>Veteran-owned. Based in Puyallup, WA. I work in person around Puyallup and Tacoma, and remotely with clients anywhere.</li>
       </ul>
+      <a href="https://www.aadmm.com/"><img class="badge" src="/img/aadmm-member.png" alt="Member of the American Association of Daily Money Managers: background check, standards of practice, code of ethics" width="300" height="60"></a>
+      <div class="creds">
+        <img src="/img/badge-proadvisor-gold.png" alt="Intuit ProAdvisor Gold" width="110" height="110">
+        <img src="/img/badge-quickbooks-level-2.png" alt="Intuit ProAdvisor QuickBooks Level 2 Certified" width="110" height="110">
+        <img src="/img/badge-associate-digital-bookkeeper.png" alt="Associate Digital Bookkeeper (ADB)" width="110" height="110">
+      </div>
     </section>
 
     <section id="privacy">
@@ -147,6 +195,11 @@
     <section id="scope">
       <h2>What I do not do</h2>
       <p>I am a daily money manager, not a CPA, investment advisor, financial planner, or attorney. I do not prepare tax returns, manage investments, or give legal advice. If you need one of those, I am glad to work alongside the professional you choose.</p>
+    </section>
+
+    <section id="fees">
+      <h2>How fees work</h2>
+      <p>The first call is free. After that I work on a monthly retainer, and the price depends on the scope of the work: how many accounts, properties, and bills there are, and how often we meet. Plans typically start at $500 a month, with a one-time setup fee at the beginning. More complex households, such as several properties or a trust, cost more. You will have the price in writing before you sign anything.</p>
     </section>
 
     <section id="contact">
@@ -163,6 +216,7 @@
 <footer>
   <div class="wrap">
     <p>Instinctual Bookkeeping, LLC &middot; Puyallup, Washington &middot; <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a></p>
+    <p class="small-credit" style="margin:0 0 8px;">Banner photo by Ronin on <a href="https://unsplash.com/photos/a-view-of-a-mountain-range-with-trees-in-the-foreground-yrgGGpdivbc">Unsplash</a>.</p>
     <p>Daily money management is not tax, investment, or legal advice, and I am not a licensed CPA, financial planner, or attorney.</p>
   </div>
 </footer>

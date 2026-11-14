@@ -8,25 +8,25 @@
 <link rel="canonical" href="https://instinctualbookkeeping.com/money-rules.html">
 <style>
   :root {
-    --bg: #f7f5f0;
+    --bg: #f4f6fa;
     --surface: #ffffff;
-    --ink: #1c2432;
-    --ink-soft: #4a5262;
-    --rule: #ded8ca;
-    --accent: #1f6f5c;
+    --ink: #14213d;
+    --ink-soft: #4b5668;
+    --rule: #d7dee9;
+    --accent: #1f3a5f;
     --accent-ink: #ffffff;
-    --accent-soft: #e3eee9;
+    --accent-soft: #e6edf6;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14171d;
-      --surface: #1b1f27;
-      --ink: #e9e6df;
-      --ink-soft: #b1b5be;
-      --rule: #2f343e;
-      --accent: #55bda1;
-      --accent-ink: #0f1a16;
-      --accent-soft: #17322b;
+      --bg: #0e1623;
+      --surface: #16212f;
+      --ink: #e7ecf3;
+      --ink-soft: #a9b4c4;
+      --rule: #27364a;
+      --accent: #8fb4e8;
+      --accent-ink: #0b1424;
+      --accent-soft: #16263c;
     }
   }
   * { box-sizing: border-box; }
@@ -62,13 +62,33 @@
   .small { font-size: .88rem; color: var(--ink-soft); }
   footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  :root { --header-bg: #14284b; --brass: #a8803f; --head: #14284b; }
+  @media (prefers-color-scheme: dark) { :root { --header-bg: #0a111d; --brass: #c9a35f; --head: #e7ecf3; } }
+  h1, h2 { font-family: Georgia, "Times New Roman", serif; color: var(--head); }
+  header.site { background: var(--header-bg); border-bottom: 3px solid var(--brass); }
+  header.site .brand, header.site .brand a { color: #ffffff; }
+  header.site .brand small { color: #c5d0e0; }
+  header.site .btn.ghost { color: #ffffff; border-color: #ffffff; }
+  header.site .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  ul.plain li::before { background: var(--brass); }
+  .btn.ghost:hover { background: var(--accent-soft); }
+  .cols { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--brass); border-radius: 6px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; font-family: Georgia, "Times New Roman", serif; color: var(--head); }
+  .card p { margin: 0; font-size: .97rem; }
+  header.site .brand { display: flex; align-items: center; gap: 12px; }
+  header.site .brand .logo { border-radius: 50%; flex: none; }
+  .portrait { float: right; width: 150px; height: auto; margin: 4px 0 12px 20px; border-radius: 8px; border: 3px solid var(--brass); }
+  #about ul.plain { clear: both; }
+  @media (max-width: 560px) { .portrait { float: none; display: block; margin: 0 0 16px; } }
 </style>
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
-    <div class="brand"><a href="/" style="color:inherit;text-decoration:none;">Instinctual Bookkeeping</a><small>Daily money management &middot; Puyallup, WA</small></div>
+    <div class="brand"><img class="logo" src="/img/logo-mark.png" alt="" width="44" height="44"><span><a href="/" style="color:inherit;text-decoration:none;">Instinctual Bookkeeping</a><small>Daily money management &middot; Puyallup, WA</small></span></div>
     <a class="btn ghost" href="/#contact">Get in touch</a>
   </div>
 </header>
@@ -107,7 +127,9 @@
         <tr class="total"><td>Left over (income minus spent minus saved)</td><td class="n">$400</td></tr>
       </table>
       <p class="small">Add a notes column for one-time costs such as a car repair, a trip, or a medical bill. Over a few months those notes explain most of the surprises.</p>
-      <p><a class="btn ghost" href="Money_Rules_Tracker.xlsx" download>Download the tracking sheet (Excel)</a></p>
+      <div class="note"><strong>Get the free tracking sheet.</strong> Enter your name and email below and you will go straight to the download. You will also get one email asking you to confirm, and then an occasional short money tip from me. I will not share your email address, and you can unsubscribe at any time.</div>
+      <iframe src="https://app.suitedash.com/frm/w3kSpvuc4BDPQGos" title="Free tracking sheet sign-up" loading="lazy" style="width:100%;height:430px;border:1px solid var(--rule);border-radius:8px;background:#fff;margin-top:14px;"></iframe>
+      <p class="small">The form not showing? Write to <a href="mailto:jon@instinctualbookkeeping.com">jon@instinctualbookkeeping.com</a> and I will send you the sheet.</p>
     </section>
 
     <section class="rule" id="r3">
@@ -170,7 +192,8 @@
     <section id="work-with-me">
       <h2>How I use these rules with clients</h2>
       <p>When I work with someone through coaching or daily money management, we start from these rules. In the first few weeks we look at where you are on each one, pick the next one to work on, and build it into the monthly routine: the tracking sheet, the savings transfers, the debt plan, and the bills. You do not have to do all thirteen at once.</p>
-      <p><a class="btn" href="/#contact">Tell me what you need</a></p>
+      <p>If you would rather learn the rules and run your own money with my guidance, see <a href="/coaching.html">money coaching</a>.</p>
+      <p><a class="btn" href="/#contact">Tell me what you need</a> <a class="btn ghost" href="/coaching.html">About coaching</a></p>
     </section>
 
   </div>
